@@ -10,7 +10,6 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Heading,
-  Input,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";

@@ -8,16 +8,17 @@ export default function Navbar() {
     <Flex
       justifyContent={"space-between"}
       alignItems={"center"}
-      p={2}
+      px={"2em"}
       position={"sticky"}
       top={0}
       zIndex={999}
-      border={"1px solid black"}
+      //   border={"1px solid black"}
+      backgroundColor={"white"}
     >
       <Center
-        border={"1px solid black"}
+        // border={"1px solid black"}
         p={2}
-        w={"53%"}
+        w={"55%"}
         display={"flex"}
         justifyContent={"flex-end"}
       >
@@ -25,7 +26,7 @@ export default function Navbar() {
       </Center>
       <Center
         w={"40%"}
-        border={"1px solid black"}
+        // border={"1px solid black"}
         display={"flex"}
         justifyContent={"flex-end"}
       >
