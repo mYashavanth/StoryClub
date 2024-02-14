@@ -1,0 +1,11 @@
+.icon {
+  display: none;
+}
+.active:hover .icon {
+  display: block;
+}
+
+.footer p:hover {
+  cursor: pointer;
+  color: #dc6e66;
+}
