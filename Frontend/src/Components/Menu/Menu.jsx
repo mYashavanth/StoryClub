@@ -108,6 +108,10 @@ export default function Menu() {
                 borderRadius={"0.5em"}
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
+                onClick={() => {
+                  navigateTo("/storyWriters");
+                  onClose();
+                }}
               >
                 <Heading>Story Writers</Heading>
                 <FaArrowRight className={styles.icon} />
@@ -121,6 +125,10 @@ export default function Menu() {
                 borderRadius={"0.5em"}
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
+                onClick={() => {
+                  navigateTo("/storyTellers");
+                  onClose();
+                }}
               >
                 <Heading>Story Tellers</Heading>
                 <FaArrowRight className={styles.icon} />
@@ -151,6 +159,10 @@ export default function Menu() {
                 borderRadius={"0.5em"}
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
+                onClick={() => {
+                  navigateTo("/joinStoryClub");
+                  onClose();
+                }}
               >
                 <Heading>Join Story Club</Heading>
                 <FaArrowRight className={styles.icon} />
