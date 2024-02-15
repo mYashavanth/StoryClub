@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "./Home.module.css"; // Import the module CSS
 import LandingPage1 from "../LandingPage1/LandingPage1";
 import LandingPage2 from "../LandingPage2/LandingPage2";
-import { AuthContext } from "../../Context/AuthContext";
 
 const Home = () => {
   const sliderRef = useRef(null);
@@ -23,7 +22,7 @@ const Home = () => {
   const settings = {
     dots: true,
     dotsClass: `${styles["dots-container"]}`,
-    infinite: false,
+    infinite: true,
     speed: 1200,
     slidesToShow: 1,
     slidesToScroll: 1,
