@@ -84,11 +84,11 @@ const LandingPage1 = () => {
           <button className={styles.btn}>
             More About Us <FaPlay />
           </button>
-          <div className={styles.slide}>
+          {/* <div className={styles.slide}>
             <h4 className={styles.icon}>Slide to the next page.</h4>
             <IoIosArrowForward className={styles.icon} />
             <IoIosArrowForward className={styles.icon} />
-          </div>
+          </div> */}
           <div className={styles.section2Buttons}>
             <div className={styles.but}>
               <button>

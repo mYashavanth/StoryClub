@@ -1,0 +1,33 @@
+/* Slider.module.css */
+
+/* Slider wrapper */
+.sliderWrapper {
+  height: 100%;
+  /* border: 1px solid red; */
+  overflow-x: hidden;
+}
+
+/* Style for the container of the dots */
+.dots-container {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+/* Style for the individual dots */
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  background-color: #888; /* Inactive dot color */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Style for active dot */
+.slick-active .dot {
+  background-color: pink; /* Active dot color */
+}
