@@ -349,10 +349,10 @@ a:hover::after {
   .section2Video {
     display: none;
   }
-  .left img {
+  .left {
     display: none;
   }
-  .right img {
+  .right {
     display: none;
   }
   .section2Buttons {

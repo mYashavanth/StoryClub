@@ -86,12 +86,7 @@ const LandingPage2 = () => {
             <p>-----</p>
             <p style={{ color: "red" }}>-</p>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          <p>Come join our club</p>
         </div>
         <div className={styles.section2Buttons}>
           <button className={styles.btn}>I am a StoryTeller</button>
