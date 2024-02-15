@@ -21,8 +21,10 @@ import { BiLogoInstagramAlt } from "react-icons/bi";
 import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import menuBackground from "./Images/menuBackground.png";
 import styles from "./Menu.module.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
+  const navigateTo = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -89,6 +91,10 @@ export default function Menu() {
                 borderRadius={"0.5em"}
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
+                onClick={() => {
+                  navigateTo("/");
+                  onClose();
+                }}
               >
                 <Heading>Home</Heading>
                 <FaArrowRight className={styles.icon} />
@@ -128,8 +134,12 @@ export default function Menu() {
                 borderRadius={"0.5em"}
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
+                onClick={() => {
+                  navigateTo("/aboutUs");
+                  onClose();
+                }}
               >
-                <Heading>Our StoryClub</Heading>
+                <Heading>Our Story Club</Heading>
                 <FaArrowRight className={styles.icon} />
               </Center>
               <Center
@@ -142,10 +152,10 @@ export default function Menu() {
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
               >
-                <Heading>Join StoryClub</Heading>
+                <Heading>Join Story Club</Heading>
                 <FaArrowRight className={styles.icon} />
               </Center>
-              
+
               {/* <Center
                 color={"black"}
                 display={"flex"}

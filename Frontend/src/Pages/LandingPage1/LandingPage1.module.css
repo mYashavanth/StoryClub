@@ -1,6 +1,7 @@
-/* .landingPage1 {
+.landingPage1 {
   border: 1px solid red;
-} */
+  height: 87vh;
+}
 
 /* section 1 */
 
@@ -97,26 +98,26 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 8rem;
+  top: 7rem;
   left: 11rem;
   z-index: -1;
   /* border: 1px solid red; */
 }
 .left img {
-  width: 70%;
+  width: 65%;
 }
 .right {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 8rem;
+  top: 7rem;
   right: 11rem;
   z-index: -1;
   /* border: 1px solid red; */
 }
 .right img {
-  width: 70%;
+  width: 65%;
 }
 
 .section2Content {
@@ -143,7 +144,6 @@
   color: #333;
   /* border: 1px solid black; */
   /* padding: 0.5rem; */
-  
 }
 
 .section2Content p {
@@ -268,6 +268,7 @@ a:hover::after {
   position: relative;
   bottom: 3.5rem;
   /* border: 1px solid black; */
+  display: none;
 }
 .slide h4 {
   letter-spacing: 0.1rem;
@@ -328,6 +329,15 @@ a:hover::after {
     /* border: 1px solid black; */
     width: 15rem;
   }
+  .slide {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    bottom: 3.5rem;
+  }
 }
 
 @media all and (max-width: 767px) {
@@ -378,6 +388,12 @@ a:hover::after {
     background-color: white;
   }
   .slide {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: auto;
+    position: relative;
     bottom: 3rem;
   }
 }

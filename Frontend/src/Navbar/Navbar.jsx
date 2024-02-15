@@ -2,8 +2,10 @@ import { Box, Button, Center, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import logo from "./Images/logo.png";
 import Menu from "../Components/Menu/Menu";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigateTo = useNavigate();
   return (
     <Flex
       justifyContent={"space-between"}
@@ -22,7 +24,8 @@ export default function Navbar() {
         display={"flex"}
         justifyContent={"flex-end"}
       >
-        <Image src={logo} alt="logo" w={"10rem"} />
+        
+        <Image src={logo} alt="logo" w={"10rem"} onClick={() => navigateTo("/")} />
       </Center>
       <Center
         w={"40%"}

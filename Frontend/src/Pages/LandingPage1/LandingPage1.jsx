@@ -84,12 +84,12 @@ const LandingPage1 = () => {
           <button className={styles.btn}>
             More About Us <FaPlay />
           </button>
-          {/* <div className={styles.slide}>
+          <div className={styles.slide}>
             <h4 className={styles.icon}>Slide to the next page.</h4>
             <IoIosArrowForward className={styles.icon} />
             <IoIosArrowForward className={styles.icon} />
-          </div> */}
-          <div className={styles.section2Buttons}>
+          </div>
+          {/* <div className={styles.section2Buttons}>
             <div className={styles.but}>
               <button>
                 Audio Stories <FiArrowRight className={styles.icon} />
@@ -100,7 +100,7 @@ const LandingPage1 = () => {
                 Video Stories <FiArrowRight className={styles.icon} />
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className={styles.right}>
           <img src={right} alt="rightImg" />

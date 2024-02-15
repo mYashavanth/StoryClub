@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import styles from "./Slider.module.css"; // Import the module CSS
-import LandingPage1 from "../../Pages/LandingPage1/LandingPage1";
-import LandingPage2 from "../../Pages/LandingPage2/LandingPage2";
+import styles from "./Home.module.css"; // Import the module CSS
+import LandingPage1 from "../LandingPage1/LandingPage1";
+import LandingPage2 from "../LandingPage2/LandingPage2";
 
-const SimpleSlider = () => {
+const Home = () => {
   const sliderRef = useRef(null);
 
   const handleMouseWheel = (e) => {
@@ -49,4 +49,4 @@ const SimpleSlider = () => {
   );
 };
 
-export default SimpleSlider;
+export default Home;
