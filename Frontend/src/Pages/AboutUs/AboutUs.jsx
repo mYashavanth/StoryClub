@@ -29,8 +29,11 @@ import { TfiEmail } from "react-icons/tfi";
 import { RiContactsBookLine } from "react-icons/ri";
 import { AiOutlineMessage } from "react-icons/ai";
 import { Heading } from "@chakra-ui/react";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+  const navigateTo = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -166,6 +169,11 @@ const AboutUs = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.breadcrumbs}>
+        <p onClick={() => navigateTo("/")}>Home</p>
+        <FaArrowRightLong size={10} />
+        <p>About Story Club</p>
+      </div>
       {/* 1st section */}
       <div className={styles.section1}>
         <div className={styles.left}>

@@ -16,6 +16,9 @@ export default function Navbar() {
       zIndex={999}
       //   border={"1px solid black"}
       backgroundColor={"white"}
+      boxShadow={
+        "rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px"
+      }
     >
       <Center
         // border={"1px solid black"}
@@ -24,8 +27,12 @@ export default function Navbar() {
         display={"flex"}
         justifyContent={"flex-end"}
       >
-        
-        <Image src={logo} alt="logo" w={"10rem"} onClick={() => navigateTo("/")} />
+        <Image
+          src={logo}
+          alt="logo"
+          w={"10rem"}
+          onClick={() => navigateTo("/")}
+        />
       </Center>
       <Center
         w={"40%"}

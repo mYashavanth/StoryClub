@@ -2,8 +2,10 @@ import React, { useEffect, useRef } from "react";
 import styles from "./LandingPage2.module.css";
 import left from "./Images/section2/left.png";
 import right from "./Images/section2/right.png";
+import { useNavigate } from "react-router-dom";
 
 const LandingPage2 = () => {
+  const navigateTo = useNavigate();
   const marqueeRef = useRef(null);
 
   const handleMouseOver = () => {
@@ -89,8 +91,18 @@ const LandingPage2 = () => {
           <p>Come join our club</p>
         </div>
         <div className={styles.section2Buttons}>
-          <button className={styles.btn}>I am a StoryTeller</button>
-          <button className={styles.btn}>I am a StoryWriter</button>
+          <button
+            className={styles.btn}
+            onClick={() => navigateTo("/storyTellers")}
+          >
+            I am a StoryTeller
+          </button>
+          <button
+            className={styles.btn}
+            onClick={() => navigateTo("/storyWriters")}
+          >
+            I am a StoryWriter
+          </button>
         </div>
         <div className={styles.section2Images}>
           <div className={styles.left}>

@@ -1,3 +1,18 @@
+.breadcrumbs {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: small;
+  position: fixed;
+  z-index: 100;
+}
+.breadcrumbs p {
+  cursor: pointer;
+}
+.breadcrumbs p:nth-last-child(1) {
+  cursor: default;
+}
 /* section 1 */
 body {
   margin: 0;

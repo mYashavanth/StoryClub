@@ -44,6 +44,7 @@ const Home = () => {
         <div>
           <LandingPage2 />
         </div>
+       
       </Slider>
     </div>
   );
