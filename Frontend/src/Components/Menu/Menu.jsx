@@ -61,7 +61,14 @@ export default function Menu() {
             backgroundColor={"#DC6E66"}
             borderRadius={"50%"}
             mt={"2em"}
-            mr={"3em"}
+            mr={"1.5em"}
+            _hover={{
+              backgroundColor: "#F9ECE3",
+              color: "#DC6E66",
+              border: "1px solid #DC6E66",
+            }}
+            w={"4em"}
+            h={"4em"}
           />
           <DrawerHeader>Menu</DrawerHeader>
 

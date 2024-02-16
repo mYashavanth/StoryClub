@@ -1,0 +1,16 @@
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: Rakkas;
+  letter-spacing: 0.1rem;
+}
+
+body p {
+  font-family: Rasa;
+}
+body {
+    background-image: url("./Images/Background.png");
+}

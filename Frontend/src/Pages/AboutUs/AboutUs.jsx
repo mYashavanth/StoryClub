@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import leftImg from "./Images/section1/leftImg.png";
 import rightImg from "./Images/section1/rightImg.png";
 import middleImg from "./Images/section1/middleImg.png";
@@ -28,7 +28,7 @@ import { IoPersonOutline } from "react-icons/io5";
 import { TfiEmail } from "react-icons/tfi";
 import { RiContactsBookLine } from "react-icons/ri";
 import { AiOutlineMessage } from "react-icons/ai";
-import { Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
@@ -40,6 +40,42 @@ const AboutUs = () => {
     mobile: "",
     message: "",
   });
+  const h1Ref = useRef(null);
+  const pRef = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+
+  useEffect(() => {
+    const spanText = (text) => {
+      let string = text.innerText;
+      let spanned = "";
+      for (let i = 0; i < string.length; i++) {
+        if (string.substring(i, i + 1) === " ")
+          spanned += string.substring(i, i + 1);
+        else spanned += "<span>" + string.substring(i, i + 1) + "</span>";
+      }
+      text.innerHTML = spanned;
+
+      let animations = text.querySelectorAll("span");
+      animations.forEach((letter, i) => {
+        letter.style.animationDelay = i * 0.1 + "s";
+      });
+    };
+
+    if (h1Ref.current) {
+      spanText(h1Ref.current);
+    }
+
+    if (pRef.current) {
+      spanText(pRef.current);
+    }
+    if (ref3.current) {
+      spanText(ref3.current);
+    }
+    if (ref4.current) {
+      spanText(ref4.current);
+    }
+  }, []);
   const employees = [
     {
       id: 1,
@@ -180,7 +216,9 @@ const AboutUs = () => {
           <img src={leftImg} alt="leftImg" />
         </div>
         <div className={styles.middle}>
-          <Heading>Our Story Club</Heading>
+          <h1 ref={h1Ref} className={styles.animation}>
+            Our Story Club
+          </h1>
           <div
             style={{
               display: "flex",
@@ -205,7 +243,9 @@ const AboutUs = () => {
 
       {/* 2nd section */}
       <div className={styles.section2}>
-        <Heading>Inside Story CLub</Heading>
+        <h1 ref={pRef} className={styles.animation}>
+          Inside Story CLub
+        </h1>
         <div
           style={{
             display: "flex",
@@ -241,7 +281,7 @@ const AboutUs = () => {
 
       {/* 3rd section */}
       <div className={styles.section3}>
-        <Heading>Our Sucsess Stories</Heading>
+        <h1 ref={ref3} className={styles.animation}>Our Sucsess Stories</h1>
         <div
           style={{
             display: "flex",
@@ -280,7 +320,7 @@ const AboutUs = () => {
 
       {/* 5th section */}
       <div className={styles.section5}>
-        <Heading>Get in touch with us</Heading>
+        <h1 ref={ref4} className={styles.animation}>Get in touch with us</h1>
         <div
           style={{
             display: "flex",

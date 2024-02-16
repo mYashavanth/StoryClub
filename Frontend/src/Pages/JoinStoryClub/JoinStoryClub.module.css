@@ -1,0 +1,78 @@
+/* section 1 */
+.section1 {
+  width: 60%;
+  background-color: #f5c365;
+  padding: 0.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.section1Content {
+  display: flex;
+  justify-content: center;
+}
+
+.section1Content p {
+  border-right: 1px solid black;
+  padding: 0 1.5rem;
+}
+.section1Content p:nth-last-child(1) {
+  border-right: none;
+}
+
+.section2 {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.section2 button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 35%;
+}
+
+.section2 h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 1px;
+  color: #333;
+  /* border: 1px solid black; */
+  /* padding: 0.5rem; */
+}
+
+.section2 p {
+  font-size: 20px;
+  color: #333;
+}
+
+.section2 h1 span,
+.section2 p span {
+  display: inline-block;
+  animation: slideLeft 1.5s forwards;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.section2Video iframe {
+  width: 40%;
+  height: 20rem;
+  margin: auto;
+  border-radius: 1.5rem;
+}

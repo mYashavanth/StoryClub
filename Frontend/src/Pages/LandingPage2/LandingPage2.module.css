@@ -5,7 +5,7 @@
 
 /* section 1 */
 .section1 {
-  width: 70%;
+  width: 60%;
   background-color: #f5c365;
   padding: 0.1rem;
   display: flex;
@@ -21,6 +21,9 @@
 .section1Content p {
   border-right: 1px solid black;
   padding: 0 1.5rem;
+}
+.section1Content p:nth-last-child(1) {
+  border-right: none;
 }
 
 /* section 2 */
