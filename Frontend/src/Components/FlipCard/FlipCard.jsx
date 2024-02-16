@@ -5,7 +5,7 @@ import { AuthContext } from "../../Context/AuthContext";
 const FlipCard = ({ data }) => {
   const { position, setPosition } = useContext(AuthContext);
   // console.log(data.image);
-  console.log(position);
+  // console.log(position);
   return (
     <div className={styles["flip-card"]}>
       <div className={styles["flip-card-inner"]}>
