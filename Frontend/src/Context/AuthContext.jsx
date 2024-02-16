@@ -3,10 +3,10 @@ import React, { createContext, useState } from "react";
 export const AuthContext = createContext();
 
 export default function AuthContextProvider({ children }) {
-  const [user, setUser] = useState("hi");
+  const [position, setPosition] = useState("");
 
   return (
-    <AuthContext.Provider value={{ user, setUser }}>
+    <AuthContext.Provider value={{ position, setPosition }}>
       {children}
     </AuthContext.Provider>
   );
