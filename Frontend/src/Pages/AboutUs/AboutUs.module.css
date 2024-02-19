@@ -10,9 +10,16 @@
 }
 .breadcrumbs p {
   cursor: pointer;
+  color: black;
+}
+.breadcrumbs p:hover {
+  color: #dc6e66;
 }
 .breadcrumbs p:nth-last-child(1) {
   cursor: default;
+}
+.breadcrumbs p:nth-last-child(1):hover {
+  color: black;
 }
 
 h1 {

@@ -1,0 +1,170 @@
+.breadcrumbs {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: small;
+  margin-left: 1em;
+  /* position: fixed;
+  z-index: 100;
+  left: 1rem; */
+}
+.breadcrumbs p {
+  cursor: pointer;
+  color: black;
+}
+.breadcrumbs p:hover {
+  color: #dc6e66;
+}
+.breadcrumbs p:nth-last-child(1) {
+  cursor: default;
+}
+.breadcrumbs p:nth-last-child(1):hover {
+  color: black;
+}
+
+/* section 1 */
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 1px;
+  color: #333;
+  /* border: 1px solid black; */
+  /* padding: 0.5rem; */
+}
+
+h1 span {
+  display: inline-block;
+  animation: slideLeft 1.5s forwards;
+  opacity: 0;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+/* section 2 */
+/* CSS */
+.btn {
+  background-color: #f7ded5;
+  border: 0 solid #e5e7eb;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 60%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  /* transform: rotate(-2deg); */
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 1.7rem;
+  margin: auto;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  border-radius: 1.7rem;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.btn:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+.btn:hover {
+  background-color: #dc6e66;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+
+.formInput {
+  border: 2px solid #dc6e66;
+  border-radius: 1.5rem;
+  width: 100%;
+  display: flex;
+  padding: 0.1rem;
+  /* border: 1px solid blue; */
+}
+.formInputIcon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fcd2ce;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dc6e66;
+}
+.formInput:hover .formInputIcon {
+  background-color: #dc6e66;
+  color: white;
+}
+
+.formInput input {
+  padding: 0.2rem;
+  border: none;
+  outline: none;
+  width: 80%;
+  /* border: 1px solid red; */
+}
+.formInput textarea {
+  width: 90%;
+  border: none;
+  outline: none;
+}
+.formInputButtons button {
+  width: 15rem;
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .formInput textarea {
+    width: 85%;
+  }
+}
+@media all and (max-width: 767px) {
+  h1 {
+    font-size: 38px;
+  }
+  .formInput textarea {
+    width: 80%;
+  }
+}

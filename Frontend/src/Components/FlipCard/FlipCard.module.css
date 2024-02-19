@@ -143,7 +143,16 @@
 }
 @media all and (max-width: 767px) {
   .flip-card {
-    width: 20rem;
-    height: 30rem;
+    width: 20em;
+    height: 35rem;
+    padding: 0rem;
+  }
+  .flip-card-front img {
+    position: absolute;
+    width: 35%;
+    bottom: 0em;
+    left: -3.5em;
+    transform: none;
+    /* z-index: -1; */
   }
 }

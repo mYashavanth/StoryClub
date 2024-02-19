@@ -6,10 +6,13 @@ import storyTeller from "./Images/storyTeller.png";
 import actorModel from "./Images/actorModel.png";
 import filmmaker from "./Images/filmmaker.png";
 import anchor from "./Images/anchor.png";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 export default function JoinStoryClub() {
   const marqueeRef = useRef(null);
   const h1Ref = useRef(null);
   const pRef = useRef(null);
+  const navigateTo = useNavigate();
 
   const hiringData = [
     {
@@ -85,6 +88,11 @@ export default function JoinStoryClub() {
 
   return (
     <Box>
+      <div className={styles.breadcrumbs}>
+        <p onClick={() => navigateTo("/")}>Home</p>
+        <FaArrowRightLong size={10} />
+        <p>Join Story Club</p>
+      </div>
       {/* Section 1 */}
       <div className={styles.section1}>
         <marquee
@@ -120,11 +128,11 @@ export default function JoinStoryClub() {
           <p>-----</p>
           <p style={{ color: "red" }}>-</p>
         </div>
-        <Text>
+        {/* <Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim
-        </Text>
+        </Text> */}
         <Box className={styles.section2Video}>
           <iframe
             title="Embedded Video"
