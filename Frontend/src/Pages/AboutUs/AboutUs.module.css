@@ -4,9 +4,9 @@
   align-items: center;
   gap: 0.5rem;
   font-size: small;
-  position: fixed;
+  /* position: fixed;
   z-index: 100;
-  left: 1rem;
+  left: 1rem; */
 }
 .breadcrumbs p {
   cursor: pointer;

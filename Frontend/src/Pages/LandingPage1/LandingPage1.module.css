@@ -342,6 +342,9 @@ a:hover::after {
   .section1 {
     width: 100%;
   }
+  .section1 p {
+    font-size: 0.8rem;
+  }
   .section2Content {
     width: 90%;
     display: flex;

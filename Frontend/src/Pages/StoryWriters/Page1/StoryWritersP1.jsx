@@ -45,6 +45,14 @@ export default function StoryWritersP1() {
       spanText(h1Ref2.current);
     }
   }, []);
+
+  const handleNext = () => {
+    if (activeCategory !== "Slelect Category...") {
+      navigateTo("/storyWriters/page2");
+    } else {
+      alert("Please select a category");
+    }
+  };
   return (
     <>
       <Box>
@@ -65,7 +73,7 @@ export default function StoryWritersP1() {
           m={"auto"}
         >
           <Box
-            border={"1px solid black"}
+            // border={"1px solid black"}
             p={"1rem"}
             display={"flex"}
             flexDirection={"column"}
@@ -120,10 +128,7 @@ export default function StoryWritersP1() {
                 }}
               />
             </Box>
-            <button
-              className={styles.btn}
-              onClick={() => navigateTo("/storyWriters/page2")}
-            >
+            <button className={styles.btn} onClick={handleNext}>
               Next
             </button>
           </Box>
