@@ -116,7 +116,7 @@ export default function Menu() {
                 _hover={{ backgroundColor: "#FAF2E7", color: "#DC6E66" }}
                 className={styles.active}
                 onClick={() => {
-                  navigateTo("/storyWriters");
+                  navigateTo("/storyWriters/page1");
                   onClose();
                 }}
               >

@@ -99,7 +99,7 @@ const LandingPage2 = () => {
           </button>
           <button
             className={styles.btn}
-            onClick={() => navigateTo("/storyWriters")}
+            onClick={() => navigateTo("/storyWriters/page1")}
           >
             I am a StoryWriter
           </button>
