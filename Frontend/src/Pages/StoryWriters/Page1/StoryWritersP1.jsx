@@ -68,7 +68,7 @@ export default function StoryWritersP1() {
           alignItems={"center"}
           p={"1rem"}
           gap={"1rem"}
-          border={"1px solid black"}
+        //   border={"1px solid black"}
           w={{ base: "100%", md: "100%", lg: "100%", xl: "100%" }}
           m={"auto"}
         >
