@@ -134,7 +134,7 @@ export default function StoryWritersP2() {
               display={"flex"}
               gap={"1rem"}
               w={"100%"}
-              border={"1px solid black"}
+            //   border={"1px solid black"}
             >
               <button
                 className={styles.btn}
