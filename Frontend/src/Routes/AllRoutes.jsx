@@ -12,6 +12,7 @@ import Submitted from "../Pages/JoinStoryClubFormSubmitted/Submitted";
 import StoryWritersP1 from "../Pages/StoryWriters/Page1/StoryWritersP1";
 import StoryWritersP2 from "../Pages/StoryWriters/Page2/StoryWritersP2";
 import StoryWritersP3 from "../Pages/StoryWriters/Page3/StoryWritersP3";
+import StoryWriterSubmission from "../Pages/StoryWriters/Submitted/StoryWriterSubmission";
 
 const AllRoutes = () => {
     return (
@@ -21,6 +22,7 @@ const AllRoutes = () => {
             <Route path="/storyWriters/page1" element={<StoryWritersP1 />} />
             <Route path="/storyWriters/page2" element={<StoryWritersP2 />} />
             <Route path="/storyWriters/page3" element={<StoryWritersP3 />} />
+            <Route path="/storyWriters/submitted" element={<StoryWriterSubmission />} />
             <Route path="/storyTellers" element={<StoryTellers />} />
             <Route path="/joinStoryClub" element={<JoinStoryClub />} />
             <Route path="/apply" element={<JoinStoryClubForm />} />

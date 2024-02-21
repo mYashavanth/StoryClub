@@ -36,7 +36,7 @@ export default function SubmissionDone({data}) {
   }, []);
   return (
     <>
-      <Box display={"flex"} flexDirection={"column"} gap={"1rem"}>
+      <Box display={"flex"} flexDirection={"column"} gap={"1rem"} className={styles.section1}>
         <div className={styles.breadcrumbs}>
           <FaArrowLeftLong size={15} />
           <p onClick={() => navigateTo("/")}>Back to Homepage</p>
