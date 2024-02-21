@@ -10,6 +10,7 @@
   left: 1rem; */
 }
 .breadcrumbs p {
+  font-size: medium;
   cursor: pointer;
   color: black;
 }
