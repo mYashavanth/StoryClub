@@ -22,7 +22,7 @@
   color: black;
 }
 
-h1 {
+.container h1 {
   text-align: center;
   text-transform: uppercase;
   font-size: 50px;
@@ -32,13 +32,13 @@ h1 {
   /* padding: 0.5rem; */
 }
 
-p {
+.container p {
   font-size: 20px;
   color: #333;
 }
 
-h1 span,
-p span {
+.container h1 span,
+.container p span {
   display: inline-block;
   animation: slideLeft 1.5s forwards;
   opacity: 0;

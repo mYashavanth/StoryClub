@@ -31,6 +31,7 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { Box, Heading } from "@chakra-ui/react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 
 const AboutUs = () => {
   const navigateTo = useNavigate();
@@ -204,20 +205,89 @@ const AboutUs = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.breadcrumbs}>
-        <p onClick={() => navigateTo("/")}>Home</p>
-        <FaArrowRightLong size={10} />
-        <p>About Story Club</p>
-      </div>
-      {/* 1st section */}
-      <div className={styles.section1}>
-        <div className={styles.left}>
-          <img src={leftImg} alt="leftImg" />
+    <>
+      <div className={styles.container}>
+        <div className={styles.breadcrumbs}>
+          <p onClick={() => navigateTo("/")}>Home</p>
+          <FaArrowRightLong size={10} />
+          <p>About Story Club</p>
         </div>
-        <div className={styles.middle}>
-          <h1 ref={h1Ref} className={styles.animation}>
-            Our Story Club
+        {/* 1st section */}
+        <div className={styles.section1}>
+          <div className={styles.left}>
+            <img src={leftImg} alt="leftImg" />
+          </div>
+          <div className={styles.middle}>
+            <h1 ref={h1Ref} className={styles.animation}>
+              Our Story Club
+            </h1>
+            <div
+              style={{
+                display: "flex",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                justifyContent: "center",
+              }}
+            >
+              <p style={{ color: "red" }}>-</p>
+              <p>-----</p>
+              <p style={{ color: "red" }}>-</p>
+            </div>
+            <img src={middleImg} alt="middleImg" />
+            <button
+              onClick={() => console.log("clicked")}
+              className={styles.btn}
+            >
+              Or Listen To Story Club <FaPlay />
+            </button>
+          </div>
+          <div className={styles.right}>
+            <img src={rightImg} alt="rightImg" />
+          </div>
+        </div>
+
+        {/* 2nd section */}
+        <div className={styles.section2}>
+          <h1 ref={pRef} className={styles.animation}>
+            Inside Story CLub
+          </h1>
+          <div
+            style={{
+              display: "flex",
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              justifyContent: "center",
+            }}
+          >
+            <p style={{ color: "white" }}>-</p>
+            <p>-----</p>
+            <p style={{ color: "white" }}>-</p>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempororis.
+          </p>
+          <Slider {...settings} className={styles.slider}>
+            {employees.map((employee) => (
+              <div key={employee.id} className={styles.sliderItem}>
+                <img
+                  src={employee.image}
+                  alt={employee.name}
+                  onClick={() => console.log(employee.name)}
+                />
+                <div>
+                  <h3>{employee.name}</h3>
+                  <p>{employee.position}</p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+
+        {/* 3rd section */}
+        <div className={styles.section3}>
+          <h1 ref={ref3} className={styles.animation}>
+            Our Sucsess Stories
           </h1>
           <div
             style={{
@@ -231,196 +301,137 @@ const AboutUs = () => {
             <p>-----</p>
             <p style={{ color: "red" }}>-</p>
           </div>
-          <img src={middleImg} alt="middleImg" />
-          <button onClick={() => console.log("clicked")} className={styles.btn}>
-            Or Listen To Story Club <FaPlay />
-          </button>
-        </div>
-        <div className={styles.right}>
-          <img src={rightImg} alt="rightImg" />
-        </div>
-      </div>
-
-      {/* 2nd section */}
-      <div className={styles.section2}>
-        <h1 ref={pRef} className={styles.animation}>
-          Inside Story CLub
-        </h1>
-        <div
-          style={{
-            display: "flex",
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            justifyContent: "center",
-          }}
-        >
-          <p style={{ color: "white" }}>-</p>
-          <p>-----</p>
-          <p style={{ color: "white" }}>-</p>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempororis.
-        </p>
-        <Slider {...settings} className={styles.slider}>
-          {employees.map((employee) => (
-            <div key={employee.id} className={styles.sliderItem}>
-              <img
-                src={employee.image}
-                alt={employee.name}
-                onClick={() => console.log(employee.name)}
-              />
-              <div>
-                <h3>{employee.name}</h3>
-                <p>{employee.position}</p>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      {/* 3rd section */}
-      <div className={styles.section3}>
-        <h1 ref={ref3} className={styles.animation}>Our Sucsess Stories</h1>
-        <div
-          style={{
-            display: "flex",
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            justifyContent: "center",
-          }}
-        >
-          <p style={{ color: "red" }}>-</p>
-          <p>-----</p>
-          <p style={{ color: "red" }}>-</p>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempororis.
-        </p>
-        <SliderComponent />
-        <button onClick={() => console.log("clicked")} className={styles.btn}>
-          For more testimonial click here
-        </button>
-      </div>
-
-      {/* 4th section */}
-      <div className={styles.section4}>
-        <div className={styles.publish}>
-          <LuSend />
-          <p>Publish your stories to reach millions</p>
-        </div>
-        <div className={styles.publish}>
-          <TbLogin2 />
           <p>
-            Get access to our stories rs 49 <sub> / month*</sub>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempororis.
           </p>
-        </div>
-      </div>
-
-      {/* 5th section */}
-      <div className={styles.section5}>
-        <h1 ref={ref4} className={styles.animation}>Get in touch with us</h1>
-        <div
-          style={{
-            display: "flex",
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-            justifyContent: "center",
-          }}
-        >
-          <p style={{ color: "red" }}>-</p>
-          <p>-----</p>
-          <p style={{ color: "red" }}>-</p>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempororis.
-        </p>
-        <div className={styles.contactDetails}>
-          {/* card 1 */}
-          <div className={styles.contact}>
-            <div className={styles.contactIcon}>
-              <BiSolidPhoneCall />
-            </div>
-            <p>Call StoryClub</p>
-            <h3>+91 7892 858593</h3>
-          </div>
-          {/* card 2 */}
-          <div className={styles.contact}>
-            <div className={styles.contactIcon}>
-              <GoMail />
-            </div>
-            <p>Email Story Club</p>
-            <h3>info@storyclub.in</h3>
-          </div>
-          {/* card 3 */}
-          <div className={styles.contact}>
-            <div className={styles.contactIcon}>
-              <TfiLocationPin />
-            </div>
-            <p>Locate StoryCLub</p>
-            <h3>Domlur, Bangalore.</h3>
-          </div>
-        </div>
-      </div>
-      <form onSubmit={handleSubmit}>
-        <div className={styles.form}>
-          <div className={styles.formInputs}>
-            <div className={styles.formInput}>
-              <div className={styles.formInputIcon}>
-                <IoPersonOutline style={{ fontSize: "1.5rem" }} />
-              </div>
-              <input
-                type="text"
-                name="name"
-                placeholder="Enter name"
-                value={formData.name}
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-            <div className={styles.formInput}>
-              <div className={styles.formInputIcon}>
-                <TfiEmail style={{ fontSize: "1.5rem" }} />
-              </div>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter email"
-                value={formData.email}
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-            <div className={styles.formInput}>
-              <div className={styles.formInputIcon}>
-                <RiContactsBookLine style={{ fontSize: "1.5rem" }} />
-              </div>
-              <input
-                type="tel"
-                name="mobile"
-                placeholder="Enter mobile"
-                value={formData.mobile}
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-          </div>
-          <div className={styles.formTextArea}>
-            <div className={styles.formInputIcon}>
-              <AiOutlineMessage style={{ fontSize: "1.5rem" }} />
-            </div>
-            <textarea
-              name="message"
-              placeholder="Enter message"
-              value={formData.message}
-              onChange={(e) => handleChange(e)}
-            />
-          </div>
-          <button type="submit" className={styles.btn}>
-            Send
+          <SliderComponent />
+          <button onClick={() => console.log("clicked")} className={styles.btn}>
+            For more testimonial click here
           </button>
         </div>
-      </form>
-    </div>
+
+        {/* 4th section */}
+        <div className={styles.section4}>
+          <div className={styles.publish}>
+            <LuSend />
+            <p>Publish your stories to reach millions</p>
+          </div>
+          <div className={styles.publish}>
+            <TbLogin2 />
+            <p>
+              Get access to our stories rs 49 <sub> / month*</sub>
+            </p>
+          </div>
+        </div>
+
+        {/* 5th section */}
+        <div className={styles.section5}>
+          <h1 ref={ref4} className={styles.animation}>
+            Get in touch with us
+          </h1>
+          <div
+            style={{
+              display: "flex",
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+              justifyContent: "center",
+            }}
+          >
+            <p style={{ color: "red" }}>-</p>
+            <p>-----</p>
+            <p style={{ color: "red" }}>-</p>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempororis.
+          </p>
+          <div className={styles.contactDetails}>
+            {/* card 1 */}
+            <div className={styles.contact}>
+              <div className={styles.contactIcon}>
+                <BiSolidPhoneCall />
+              </div>
+              <p>Call StoryClub</p>
+              <h3>+91 7892 858593</h3>
+            </div>
+            {/* card 2 */}
+            <div className={styles.contact}>
+              <div className={styles.contactIcon}>
+                <GoMail />
+              </div>
+              <p>Email Story Club</p>
+              <h3>info@storyclub.in</h3>
+            </div>
+            {/* card 3 */}
+            <div className={styles.contact}>
+              <div className={styles.contactIcon}>
+                <TfiLocationPin />
+              </div>
+              <p>Locate StoryCLub</p>
+              <h3>Domlur, Bangalore.</h3>
+            </div>
+          </div>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className={styles.form}>
+            <div className={styles.formInputs}>
+              <div className={styles.formInput}>
+                <div className={styles.formInputIcon}>
+                  <IoPersonOutline style={{ fontSize: "1.5rem" }} />
+                </div>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter name"
+                  value={formData.name}
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+              <div className={styles.formInput}>
+                <div className={styles.formInputIcon}>
+                  <TfiEmail style={{ fontSize: "1.5rem" }} />
+                </div>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter email"
+                  value={formData.email}
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+              <div className={styles.formInput}>
+                <div className={styles.formInputIcon}>
+                  <RiContactsBookLine style={{ fontSize: "1.5rem" }} />
+                </div>
+                <input
+                  type="tel"
+                  name="mobile"
+                  placeholder="Enter mobile"
+                  value={formData.mobile}
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+            </div>
+            <div className={styles.formTextArea}>
+              <div className={styles.formInputIcon}>
+                <AiOutlineMessage style={{ fontSize: "1.5rem" }} />
+              </div>
+              <textarea
+                name="message"
+                placeholder="Enter message"
+                value={formData.message}
+                onChange={(e) => handleChange(e)}
+              />
+            </div>
+            <button type="submit" className={styles.btn}>
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+      <Footer />
+    </>
   );
 };
 
