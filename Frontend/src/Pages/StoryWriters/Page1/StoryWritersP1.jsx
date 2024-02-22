@@ -1,13 +1,14 @@
 import { Box, Heading, Text, calc } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import styles from "./StoryWritersP1.module.css";
 import { MdDownloadDone } from "react-icons/md";
+import { AuthContext } from "../../../Context/AuthContext";
 
 export default function StoryWritersP1() {
   const navigateTo = useNavigate();
-  const [activeCategory, setActiveCategory] = useState("Slelect Category...");
+  const {activeCategory, setActiveCategory} = useContext(AuthContext)
   const categories = [
     "Stories about social media",
     "Teenagers stories",

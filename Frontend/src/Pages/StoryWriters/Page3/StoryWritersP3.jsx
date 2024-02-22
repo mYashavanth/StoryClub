@@ -1,13 +1,17 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { MdDownloadDone } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import styles from "./StoryWritersP3.module.css";
 import person from "./Images/person.png";
 import fileImg from "./Images/fileImg.png";
+import { AuthContext } from "../../../Context/AuthContext";
 
 export default function StoryWritersP3() {
+  const { activeCategory, setActiveCategory, storyTitle, setStoryTitle } =
+    useContext(AuthContext);
+
   const navigateTo = useNavigate();
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);
@@ -75,8 +79,10 @@ export default function StoryWritersP3() {
       alert("Please select a file.");
       return;
     }
-    console.log(file);
+    console.log({ activeCategory, storyTitle, file });
     setFile(null);
+    setStoryTitle("");
+    setActiveCategory("Slelect Category...");
     navigateTo("/storyWriters/submitted");
   };
   return (

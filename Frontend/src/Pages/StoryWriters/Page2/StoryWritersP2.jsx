@@ -1,14 +1,15 @@
 import { Box, Image, Text } from "@chakra-ui/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import styles from "./StoryWritersP2.module.css";
 import { useNavigate } from "react-router-dom";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { MdDownloadDone } from "react-icons/md";
 import person from "./Images/person.png";
+import { AuthContext } from "../../../Context/AuthContext";
 
 export default function StoryWritersP2() {
   const navigateTo = useNavigate();
-  const [storyTitle, setStoryTitle] = useState("");
+  const {storyTitle, setStoryTitle} = useContext(AuthContext)
   const h1Ref = useRef(null);
   const h1Ref2 = useRef(null);
   useEffect(() => {
